@@ -20,13 +20,10 @@ API Task Flow is a RESTful API built with NestJS for efficient task management. 
 ## Installation
 
 1. Clone the repository:
-   ```bash
    git clone https://github.com/danielhssouza/api-task-flow.git
    cd api-task-flow
 Install the dependencies with pnpm:
 
-bash
-Copiar código
 pnpm install
 Set up the PostgreSQL database:
 
@@ -34,14 +31,10 @@ Create a database named taskdb.
 Update the database credentials in the src/app.module.ts file.
 Run migrations (if applicable):
 
-bash
-Copiar código
 pnpm typeorm migration:run
 Usage
 Start the development server:
 
-bash
-Copiar código
 pnpm run start:dev
 The API will be available at http://localhost:3000.
 
@@ -71,28 +64,3 @@ Copiar código
 }
 Delete Task
 DELETE /tasks/:id
-Project Structure
-lua
-Copiar código
-src/
-│
-├── common/
-│   └── dto/
-│       └── create-task.dto.ts
-│
-├── tasks/
-│   ├── controllers/
-│   │   └── tasks.controller.ts
-│   ├── entities/
-│   │   └── task.entity.ts
-│   ├── services/
-│   │   └── tasks.service.ts
-│   └── tasks.module.ts
-│
-└── app.module.ts
-Contributing
-Fork the project
-Create a new branch for your feature (git checkout -b feature/new-feature)
-Commit your changes (git commit -m 'Add new feature')
-Push to the branch (git push origin feature/new-feature)
-Open a Pull Request
