@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:14
+    container_name: api-task-flow-db
+    environment:
+      POSTGRES_USER: user_test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: taskdb
+      PGDATA: /var/lib/postgresql/data/pgdata  
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/pgdata
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
